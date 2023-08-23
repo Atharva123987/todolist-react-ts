@@ -1,17 +1,55 @@
 ul {
   list-style: none;
-  width: 90%;
-  max-width: 40rem;
-  margin: 2rem auto;
   padding: 0;
 }
 
 li {
-  margin: 1rem 0;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  color: rgb(0, 0, 0);
+  background-color: rgb(56, 57, 106);
+  color: white;
+  padding: 1rem;
+  /* border-radius: 1rem; */
+
+
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+li div:first-child {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+li div:last-child,
+li div:first-child {
+  display: flex;
+  gap: 1rem;
+}
+
+li>div>span:first-child {
+  font-weight: 500;
+
+}
+
+li>div>span>input[type='text'] {
+  background-color: rgb(45, 47, 88);
+  box-shadow: 2px 2px rgba(255, 254, 254, 0.464);
+  color: white;
+  outline: none;
+  border: none;
+  width: 90%;
+
+
 }

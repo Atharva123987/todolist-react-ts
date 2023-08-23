@@ -1,5 +1,5 @@
 form {
-  width: 90%;
+  /* width: 90%; */
   max-width: 40rem;
   margin: 2rem auto;
 }
@@ -8,9 +8,10 @@ form {
   margin-bottom: 1rem;
 }
 
-label, input {
+label,
+input {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
 
 label {
@@ -20,7 +21,8 @@ label {
 input {
   font: inherit;
   border: 1px solid #ccc;
-  padding: 0.25rem;
+  padding: 0.25rem 0rem;
+  width: 100%;
 }
 
 input:focus {
@@ -29,11 +31,21 @@ input:focus {
 }
 
 button {
-  background: #50005a;
+  background: #ffffff;
   border: 1px solid #50005a;
-  color: white;
+  color: #50005a;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+form>div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+form>div:first-child {
+  margin-bottom: 2rem;
 }
 
 button:focus {
@@ -42,6 +54,6 @@ button:focus {
 
 button:hover,
 button:active {
-  background: #6a0a77;
+  background: rgb(211, 211, 211);
   border-color: #6a0a77;
 }

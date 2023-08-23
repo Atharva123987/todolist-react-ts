@@ -1,11 +1,14 @@
 import React, { useRef } from 'react';
 import './NewTodo.css';
 
-interface NewAddTodo {
-    onAddTodo: (name: string, description: string) => void;
+
+interface Props {
+    setIsEdited: (a: boolean) => void
+    onAddTodo: (enteredName: string, enteredDescription: string) => void
+    isEdited: boolean
 }
 
-const NewTodo: React.FC<NewAddTodo> = (props) => {
+const NewTodo: React.FC<Props> = (props: Props) => {
     const nameInputRef = useRef<HTMLInputElement>(null);
     const descriptionInputRef = useRef<HTMLInputElement>(null);
 
@@ -25,8 +28,19 @@ const NewTodo: React.FC<NewAddTodo> = (props) => {
                 <input type='text' id='todo-name' ref={nameInputRef} />
                 <label htmlFor='todo-description'>Todo Description</label>
                 <input type="text" id='todo-description' ref={descriptionInputRef} />
+
             </div>
-            <button type='submit'>Add todo</button>
+            <div>
+                {!props.isEdited ? (
+                    <>
+                        <button type='submit'>Add todo</button>
+                        <button onClick={() => props.setIsEdited(true)}>Edit</button>
+                    </>
+                ) : (
+                    <button onClick={() => props.setIsEdited(false)}>Cancel</button>
+                )
+                }
+            </div>
         </form>
     );
 }
