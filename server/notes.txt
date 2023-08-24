@@ -1,0 +1,2 @@
+Task Manager API: 
+Create an API for managing tasks, allowing users to create, update, delete, and list tasks. You can implement features like task priority, due dates, and user authentication.
