@@ -7,12 +7,17 @@ const {
     updateProfile,
 } = require("../controller/profileController.js");
 
+const authenticateUser = require('../middleware/profileAuth.js');
+
 const router = express.Router();
 
-router.get("/:username", getProfile);
-router.delete("/:username", deleteProfile);
-router.patch("/:username", updateProfile);
-router.post("/signup", signUp);
-router.post("/signin", signIn);
+// AUTH MIDDLEWARE
+// router.use(requireAuth)
+
+router.get('/:id', authenticateUser, getProfile);
+router.post('/signup', signUp);
+router.post('/signin', signIn);
+router.delete('/:id', authenticateUser, deleteProfile);
+router.patch('/:id', authenticateUser, updateProfile);
 
 module.exports = router;

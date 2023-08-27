@@ -17,16 +17,16 @@ const profileSchema = new mongoose.Schema({
         unique: false,
     },
     age: {
-        type: Number, // Add the age field as a number
+        type: Number, 
     },
     phoneNo: {
-        type: String, // Add the phoneno field as a string
+        type: String, 
     },
     bio: {
-        type: String, // Add the bio field as a string
+        type: String, 
     },
     profileImage: {
-        type: String, // Add the profile image field as a string (URL or file path)
+        type: String, 
     },
 });
 
